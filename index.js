@@ -39,7 +39,13 @@ for (let i = 0; i < playlists.length; i++) {
   playlistElement.append(playlistTitleElement)
   const tracksElement = document.createElement('ul')
   for (let i = 0; i < playlist.tracks.length; i++) {
-    const element = playlist.tracks[i]
+    const track = playlist.tracks[i]
+
+    const trackElement = document.createElement('li')
+    trackElement.append(track.title)
+
+    tracksElement.append(trackElement)
+    playlistElement.append(tracksElement)
   }
 
 

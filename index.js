@@ -1,5 +1,11 @@
-const h1 = document.createElement('h1')
-h1.append("hello IT")
 
-const root = document.getElementById("root")
-root.append(h1)
+const playlists = [
+  {
+    id:1,
+    title : "Hip-Hop Hits"
+  },
+  {
+    id:2,
+    title: "Rap Hits 1990s"
+  }
+]

@@ -36,7 +36,7 @@ for (let i = 0; i < playlists.length; i++) {
   const playlistElement = document.createElement('div')
   const playlistTitleElement = document.createElement("h2")
   playlistTitleElement.append(playlist.title)
-  playlistElement.append(playlistTitleElement)
+
   const tracksElement = document.createElement('ul')
   for (let i = 0; i < playlist.tracks.length; i++) {
     const track = playlist.tracks[i]
@@ -45,9 +45,10 @@ for (let i = 0; i < playlists.length; i++) {
     trackElement.append(track.title)
 
     tracksElement.append(trackElement)
-    playlistElement.append(tracksElement)
+
+
   }
+  playlistElement.append(playlistTitleElement, tracksElement)
 
-
-  root.append(playlistTitleElement)
+  root.append(playlistElement)
 }

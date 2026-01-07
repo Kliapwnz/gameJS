@@ -7,7 +7,7 @@ const playlists = [
         artist: "Eminem",
         title: "Rap God",
         isHot: true,
-        imageSource: "./img/icons/eminem.gpg"
+        imageSource: "./img/icons/eminem.jpg"
       },
       {
         artist: "50 cent",
@@ -25,7 +25,7 @@ const playlists = [
         artist: "Public Enemy",
         title: "Fight the Power",
         isHot: true,
-        imageSource: "./img/icons/PublicEnemy.gpg"
+        imageSource: "./img/icons/PublicEnemy.jpg"
       }
     ]
   }
@@ -45,7 +45,13 @@ for (let i = 0; i < playlists.length; i++) {
     const track = playlist.tracks[i]
 
     const trackElement = document.createElement('li')
-    trackElement.append(track.title)
+
+    const trackImageElement = document.createElement('img')
+    trackImageElement.src = track.imageSource
+
+
+
+    trackElement.append(trackImageElement, track.title)
 
     tracksElement.append(trackElement)
 

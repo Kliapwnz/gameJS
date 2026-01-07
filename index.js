@@ -65,7 +65,7 @@ function createTrackElement(inputTrack) {
   const trackAudioElement = createTrackAudio(inputTrack.audioSource)
   const trackImageElement = createTrackImage(inputTrack.imageSource)
 
-  element.append(trackImageElement, inputTrack.title, trackAudioElement)
+  element.append(trackImageElement, createTrackTitle(inputTrack), trackAudioElement)
 
   return element
 }
@@ -81,4 +81,8 @@ function createTrackAudio(audioSource) {
   trackAudioElement.src = audioSource
   trackAudioElement.controls = true
   return trackAudioElement
+}
+
+function createTrackTitle (inputTrack) {
+  return inputTrack.artist + ' - ' + inputTrack.title
 }

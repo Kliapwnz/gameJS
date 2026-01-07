@@ -73,7 +73,7 @@ function createTrackElement(inputTrack) {
 }
 
 function createTrackImage(imageSource) {
-  const trackImageElement = document.createElement('img')
-  trackImageElement.src = imageSource
-  return trackImageElement
+  const element = document.createElement('img')
+  element.src = imageSource
+  return element
 }

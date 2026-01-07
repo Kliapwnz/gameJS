@@ -35,7 +35,7 @@ for (let i = 0; i < playlists.length; i++) {
   for (let i = 0; i < playlist.tracks.length; i++) {
     const track = playlist.tracks[i]
 
-    const trackElement = createTrackElement(track);
+    const trackElement = TrackElementComponent(track);
 
     tracksElement.append(trackElement)
 
@@ -46,34 +46,34 @@ for (let i = 0; i < playlists.length; i++) {
   root.append(playlistElement)
 }
 
-function createTrackElement(inputTrack) {
+function TrackElementComponent(inputTrack) {
   const element = document.createElement('li')
 
 
-  const trackAudioElement = createTrackAudio(inputTrack.audioSource)
-  const trackImageElement = createTrackImage(inputTrack.imageSource)
+  const trackAudioElement = TrackAudioComponent(inputTrack.audioSource)
+  const trackImageElement = TrackImageComponent(inputTrack.imageSource)
 
   element.append(
     trackImageElement,
-    createTrackTitle(inputTrack),
+    TrackTitleComponent(inputTrack),
     trackAudioElement)
 
   return element
 }
 
-function createTrackImage(imageSource) {
+function TrackImageComponent(imageSource) {
   const element = document.createElement('img')
   element.src = imageSource
   return element
 }
 
-function createTrackAudio(audioSource) {
+function TrackAudioComponent(audioSource) {
   const trackAudioElement = document.createElement("audio")
   trackAudioElement.src = audioSource
   trackAudioElement.controls = true
   return trackAudioElement
 }
 
-function createTrackTitle(inputTrack) {
+function TrackTitleComponent(inputTrack) {
   return inputTrack.artist + ' - ' + inputTrack.title
 }

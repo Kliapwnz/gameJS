@@ -52,8 +52,12 @@ for (let i = 0; i < playlists.length; i++) {
     const trackImageElement = document.createElement('img')
     trackImageElement.src = track.imageSource
 
+    const trackAudioElement = document.createElement("audio")
+    trackAudioElement.src = track.audioSource
+    trackAudioElement.controls = true
 
-    trackElement.append(trackImageElement, track.title)
+
+    trackElement.append(trackImageElement, track.title, trackAudioElement)
 
     tracksElement.append(trackElement)
 

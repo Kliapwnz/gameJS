@@ -46,8 +46,9 @@ function TracksComponent(inputTracks) {
 
     element.append(trackElement)
 
-    return element
+
   }
+  return element
 }
 
 function TrackComponent(inputTrack) {

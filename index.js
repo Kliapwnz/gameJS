@@ -24,15 +24,20 @@ const playlists = [{
 
 const root = document.getElementById("root")
 
-for (let i = 0; i < playlists.length; i++) {
-  const playlist = playlists[i];
 
-  // const playlistElement = document.createElement('div')
-  // const playlistTitleElement = document.createElement("h2")
-  // playlistTitleElement.append(playlist.title)
+const playlistElement = playlistsComponent(playlists)
+root.append(playlistElement)
+
+function playlistsComponent(playlists) {
+  const element = document.createElement('div')
+  for (let i = 0; i < playlists.length; i++) {
+    const playlist = playlists[i];
+
+    element.append(playlistComponent(playlist))
 
 
-  root.append(playlistComponent(playlist))
+  }
+  return element
 }
 
 function TracksComponent(inputTracks) {

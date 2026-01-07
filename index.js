@@ -7,13 +7,15 @@ const playlists = [
         artist: "Eminem",
         title: "Rap God",
         isHot: true,
-        imageSource: "./img/icons/eminem.jpg"
+        imageSource: "./img/icons/eminem.jpg",
+        audioSource: "./music/Eminem - Rap God.mp3"
       },
       {
         artist: "50 cent",
         title: "In da Club",
         isHot: false,
-        imageSource: "./img/icons/50cent.jpeg"
+        imageSource: "./img/icons/50cent.jpeg",
+        audioSource: "./music/50cent - In da club.mp3"
       }
     ]
   },
@@ -25,7 +27,8 @@ const playlists = [
         artist: "Public Enemy",
         title: "Fight the Power",
         isHot: true,
-        imageSource: "./img/icons/PublicEnemy.jpg"
+        imageSource: "./img/icons/PublicEnemy.jpg",
+        audioSource: "./music/Public Enemy - Fight The Power (Remix).mp3"
       }
     ]
   }
@@ -48,7 +51,6 @@ for (let i = 0; i < playlists.length; i++) {
 
     const trackImageElement = document.createElement('img')
     trackImageElement.src = track.imageSource
-
 
 
     trackElement.append(trackImageElement, track.title)

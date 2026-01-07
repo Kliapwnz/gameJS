@@ -6,12 +6,14 @@ const playlists = [
       {
         artist: "Eminem",
         title: "Rap God",
-        isHot: true
+        isHot: true,
+        imageSource: "./img/icons/eminem.gpg"
       },
       {
         artist: "50 cent",
         title: "In da Club",
-        isHot: false
+        isHot: false,
+        imageSource: "./img/icons/50cent.gpg"
       }
     ]
   },

@@ -24,7 +24,8 @@ const playlists = [
       {
         artist: "Public Enemy",
         title: "Fight the Power",
-        isHot: true
+        isHot: true,
+        imageSource: "./img/icons/PublicEnemy.gpg"
       }
     ]
   }

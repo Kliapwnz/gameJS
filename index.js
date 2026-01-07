@@ -13,7 +13,7 @@ const playlists = [
         artist: "50 cent",
         title: "In da Club",
         isHot: false,
-        imageSource: "./img/icons/50cent.gpg"
+        imageSource: "./img/icons/50cent.gpeg"
       }
     ]
   },

@@ -31,22 +31,26 @@ for (let i = 0; i < playlists.length; i++) {
   const playlistTitleElement = document.createElement("h2")
   playlistTitleElement.append(playlist.title)
 
-  const tracksElement = document.createElement('ul')
-  for (let i = 0; i < playlist.tracks.length; i++) {
-    const track = playlist.tracks[i]
 
-    const trackElement = TrackElementComponent(track);
-
-    tracksElement.append(trackElement)
-
-
-  }
-  playlistElement.append(playlistTitleElement, tracksElement)
+  playlistElement.append(playlistTitleElement, TracksComponent(playlist.tracks))
 
   root.append(playlistElement)
 }
 
-function TrackElementComponent(inputTrack) {
+function TracksComponent(inputTracks) {
+  const element = document.createElement('ul')
+  for (let i = 0; i < inputTracks.length; i++) {
+    const track = inputTracks[i]
+
+    const trackElement = TrackComponent(track);
+
+    element.append(trackElement)
+
+    return element
+  }
+}
+
+function TrackComponent(inputTrack) {
   const element = document.createElement('li')
 
 

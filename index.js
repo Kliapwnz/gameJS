@@ -47,17 +47,8 @@ for (let i = 0; i < playlists.length; i++) {
   for (let i = 0; i < playlist.tracks.length; i++) {
     const track = playlist.tracks[i]
 
-    const trackElement = document.createElement('li')
 
-    const trackImageElement = document.createElement('img')
-    trackImageElement.src = track.imageSource
-
-    const trackAudioElement = document.createElement("audio")
-    trackAudioElement.src = track.audioSource
-    trackAudioElement.controls = true
-
-
-    trackElement.append(trackImageElement, track.title, trackAudioElement)
+    const trackElement = createTrackElement(track);
 
     tracksElement.append(trackElement)
 
@@ -66,4 +57,20 @@ for (let i = 0; i < playlists.length; i++) {
   playlistElement.append(playlistTitleElement, tracksElement)
 
   root.append(playlistElement)
+}
+
+function createTrackElement  (inputTrack){
+  const element = document.createElement('li')
+
+  const trackImageElement = document.createElement('img')
+  trackImageElement.src = inputTrack.imageSource
+
+  const trackAudioElement = document.createElement("audio")
+  trackAudioElement.src = inputTrack.audioSource
+  trackAudioElement.controls = true
+
+
+  element.append(trackImageElement, inputTrack.title, trackAudioElement)
+
+  return element
 }

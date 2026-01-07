@@ -27,14 +27,12 @@ const root = document.getElementById("root")
 for (let i = 0; i < playlists.length; i++) {
   const playlist = playlists[i];
 
-  const playlistElement = document.createElement('div')
-  const playlistTitleElement = document.createElement("h2")
-  playlistTitleElement.append(playlist.title)
+  // const playlistElement = document.createElement('div')
+  // const playlistTitleElement = document.createElement("h2")
+  // playlistTitleElement.append(playlist.title)
 
 
-  playlistElement.append(playlistTitleElement, TracksComponent(playlist.tracks))
-
-  root.append(playlistElement)
+  root.append(playlistComponent(playlist))
 }
 
 function TracksComponent(inputTracks) {
@@ -46,9 +44,17 @@ function TracksComponent(inputTracks) {
 
     element.append(trackElement)
 
-
   }
   return element
+}
+
+function playlistComponent(playlist) {
+  const element = document.createElement('div')
+  const playlistTitleElement = document.createElement("h2")
+  playlistTitleElement.append(playlist.title)
+  element.append(playlistTitleElement, TracksComponent(playlist.tracks))
+  return element
+
 }
 
 function TrackComponent(inputTrack) {

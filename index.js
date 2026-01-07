@@ -62,9 +62,7 @@ function createTrackElement(inputTrack) {
   const element = document.createElement('li')
 
 
-  const trackAudioElement = document.createElement("audio")
-  trackAudioElement.src = inputTrack.audioSource
-  trackAudioElement.controls = true
+  const trackAudioElement = createTrackAudio(inputTrack.audioSource)
   const trackImageElement = createTrackImage(inputTrack.imageSource)
 
   element.append(trackImageElement, inputTrack.title, trackAudioElement)
@@ -76,4 +74,11 @@ function createTrackImage(imageSource) {
   const element = document.createElement('img')
   element.src = imageSource
   return element
+}
+
+function createTrackAudio(audioSource) {
+  const trackAudioElement = document.createElement("audio")
+  trackAudioElement.src = audioSource
+  trackAudioElement.controls = true
+  return trackAudioElement
 }

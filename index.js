@@ -25,8 +25,8 @@ const playlists = [{
 const root = document.getElementById("root")
 
 
-const playlistElement = playlistsComponent(playlists)
-root.append(playlistElement)
+const playlistsElement = playlistsComponent(playlists)
+root.append(playlistsElement)
 
 function playlistsComponent(playlists) {
   const element = document.createElement('div')

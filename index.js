@@ -54,8 +54,8 @@ function TracksComponent(inputTracks) {
 }
 
 function playlistComponent(playlist) {
-  const element = document.createElement('div')
-  element.classList.add("playlist")
+  const element = createElement('div', ["playlist"])
+
   const playlistTitleElement = document.createElement("h2")
   playlistTitleElement.append(playlist.title)
   element.append(playlistTitleElement, TracksComponent(playlist.tracks))
@@ -93,4 +93,12 @@ function TrackAudioComponent(audioSource) {
 
 function TrackTitleComponent(inputTrack) {
   return `${inputTrack.isHot ? "🔥" : ""}${inputTrack.artist} - ${inputTrack.title}`
+}
+
+function createElement (tagName, classes = []) {
+  const element = document.createElement(tagName)
+  classes.forEach(c => {
+    element.classList.add(c)
+  })
+  return element
 }

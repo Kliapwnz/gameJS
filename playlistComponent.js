@@ -1,6 +1,6 @@
-import {liba} from "./liba";
-
-function playlistComponent(playlist) {
+import {liba} from "./liba.js";
+import {TracksComponent} from "./tracksComponent.js"
+export function playlistComponent(playlist) {
   const element = liba.create('div', ["playlist"])
 
   const playlistTitleElement = document.createElement("h2")

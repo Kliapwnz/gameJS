@@ -1,4 +1,6 @@
-function TracksComponent(inputTracks) {
+import {TrackComponent} from './trackComponent.js'
+
+export function TracksComponent(inputTracks) {
   const element = document.createElement('ul')
   for (let i = 0; i < inputTracks.length; i++) {
     const track = inputTracks[i]

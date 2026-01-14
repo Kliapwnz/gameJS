@@ -55,6 +55,7 @@ function TracksComponent(inputTracks) {
 
 function playlistComponent(playlist) {
   const element = document.createElement('div')
+  element.classList.add("playlist")
   const playlistTitleElement = document.createElement("h2")
   playlistTitleElement.append(playlist.title)
   element.append(playlistTitleElement, TracksComponent(playlist.tracks))

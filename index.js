@@ -91,5 +91,5 @@ function TrackAudioComponent(audioSource) {
 }
 
 function TrackTitleComponent(inputTrack) {
-  return inputTrack.artist + ' - ' + inputTrack.title
+  return `${inputTrack.isHot ? "🔥" : ""}${inputTrack.artist} - ${inputTrack.title}`
 }

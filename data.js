@@ -1,4 +1,4 @@
-const playlists = [{
+export const playlists = [{
   id: 1, title: "Hip-Hop Hits", tracks: [{
     artist: "Eminem",
     title: "Rap God",

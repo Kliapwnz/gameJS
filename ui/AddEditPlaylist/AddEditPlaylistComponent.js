@@ -9,4 +9,4 @@ export function AddEditPlaylistComponent() {
   element.open = true
 
   return element
-};
+}

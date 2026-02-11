@@ -1,4 +1,4 @@
-import {playlistsComponent} from "./ui/playlistsComponent.js";
+import {playlistsComponent} from "./ui/Playlists/playlistsComponent.js";
 import {playlists} from "./data/data.js";
 
 const root = document.getElementById("root")

@@ -1,5 +1,5 @@
-import {liba} from "../liba.js";
-import {TracksComponent} from "./tracksComponent.js"
+import {liba} from "../../../liba.js";
+import {TracksComponent} from "./Tracks/tracksComponent.js"
 export function playlistComponent(playlist) {
   const element = liba.create('div', ["playlist"])
 

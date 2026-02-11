@@ -1,4 +1,4 @@
-import {TrackComponent} from './trackComponent.js'
+import {TrackComponent} from './Track/trackComponent.js'
 
 export function TracksComponent(inputTracks) {
   const element = document.createElement('ul')

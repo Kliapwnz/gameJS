@@ -1,6 +1,6 @@
-import {TrackAudioComponent} from "./trackAudioComponent.js"
-import {TrackImageComponent} from "./trackImageComponent.js"
-import {TrackTitleComponent} from "./trackTitleComponent.js"
+import {TrackAudioComponent} from "./TrackAudio/trackAudioComponent.js"
+import {TrackImageComponent} from "./TrackImage/trackImageComponent.js"
+import {TrackTitleComponent} from "./TrackTitle/trackTitleComponent.js"
 
 export function TrackComponent(inputTrack) {
   const element = document.createElement('li')

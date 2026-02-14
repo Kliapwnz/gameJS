@@ -4,12 +4,17 @@ import {AddEditPlaylistComponent} from "./ui/AddEditPlaylist/AddEditPlaylistComp
 
 const root = document.getElementById("root")
 
-export function refresh () {
-  root.innerHTML = ""
-  const playlistsElement = playlistsComponent(playlists)
-  const addEditPlaylistElement = AddEditPlaylistComponent()
-  root.append(playlistsElement, addEditPlaylistElement)
-}
+root.innerHTML = ""
+const playlistsElement = playlistsComponent(playlists)
+const addEditPlaylistElement = AddEditPlaylistComponent()
 
-refresh()
+root.append(playlistsElement, addEditPlaylistElement)
+// export function refresh () {
+//   root.innerHTML = ""
+//   const playlistsElement = playlistsComponent(playlists)
+//   const addEditPlaylistElement = AddEditPlaylistComponent()
+//   root.append(playlistsElement, addEditPlaylistElement)
+// }
+//
+// refresh()
 

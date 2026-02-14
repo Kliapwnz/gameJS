@@ -13,7 +13,7 @@ export function playlistComponent(playlist) {
     alert("delete")
   })
 
-  element.append(deleteButtonElement,playlistTitleElement, TracksComponent(playlist.tracks))
+  element.append(deleteButtonElement, playlistTitleElement, TracksComponent(playlist.tracks))
   return element
 
 }

@@ -1,4 +1,4 @@
-export const playlists = [{
+export let playlists = [{
   id: 1, title: "Hip-Hop Hits", tracks: [{
     artist: "Eminem",
     title: "Rap God",
@@ -21,3 +21,7 @@ export const playlists = [{
     audioSource: "./music/Public Enemy - Fight The Power (Remix).mp3"
   }]
 }]
+
+export const deletePlaylist = (id) => {
+  playlists = playlists.filter(p => p.id !== id)
+}

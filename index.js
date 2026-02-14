@@ -4,8 +4,12 @@ import {AddEditPlaylistComponent} from "./ui/AddEditPlaylist/AddEditPlaylistComp
 
 const root = document.getElementById("root")
 
+function refresh () {
+  root.innerHTML = ""
+  const playlistsElement = playlistsComponent(playlists)
+  const addEditPlaylistElement = AddEditPlaylistComponent()
+  root.append(playlistsElement, addEditPlaylistElement)
+}
 
-const playlistsElement = playlistsComponent(playlists)
-const addEditPlaylistElement = AddEditPlaylistComponent()
-root.append(playlistsElement, addEditPlaylistElement)
 
+setInterval(refresh, 1000)

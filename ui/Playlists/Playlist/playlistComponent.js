@@ -1,5 +1,6 @@
 import {liba} from "../../../shared/liba.js";
 import {TracksComponent} from "./Tracks/tracksComponent.js"
+import {deletePlaylist} from "../../../data/data.js";
 
 export function playlistComponent(playlist) {
   const element = liba.create('div', ["playlist"])
@@ -10,7 +11,7 @@ export function playlistComponent(playlist) {
   const deleteButtonElement = liba.create('button')
   deleteButtonElement.append("❌")
   deleteButtonElement.addEventListener('click', () => {
-    alert("delete")
+    deletePlaylist(playlist.id)
   })
 
   element.append(deleteButtonElement, playlistTitleElement, TracksComponent(playlist.tracks))

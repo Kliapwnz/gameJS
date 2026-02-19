@@ -25,3 +25,9 @@ export let playlists = [{
 export const deletePlaylist = (id) => {
   playlists = playlists.filter(p => p.id !== id)
 }
+
+const observers = []
+
+export const subscribe = (observer) => {
+  observers.push(observer)
+}

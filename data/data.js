@@ -35,6 +35,9 @@ export const addPlaylist = () => {
     title: "New Playlist",
     tracks: []
   })
+  observers.forEach((observer) => {
+    observer()
+  })
 }
 
 const observers = []

@@ -1,6 +1,7 @@
 import {playlistsComponent} from "./ui/Playlists/playlistsComponent.js";
 import {playlists, subscribe} from "./data/data.js";
 import {AddEditPlaylistComponent} from "./ui/AddEditPlaylist/AddEditPlaylistComponent.js";
+import {PlaylistsHeader} from "./ui/PlaylistsHeader/PlaylistsHeader.js";
 
 const root = document.getElementById("root")
 
@@ -13,7 +14,7 @@ export function refresh () {
   root.innerHTML = ""
   const playlistsElement = playlistsComponent(playlists)
   const addEditPlaylistElement = AddEditPlaylistComponent()
-  root.append(playlistsElement, addEditPlaylistElement)
+  root.append(PlaylistsHeader() ,playlistsElement, addEditPlaylistElement)
 }
 subscribe(refresh)
 refresh()

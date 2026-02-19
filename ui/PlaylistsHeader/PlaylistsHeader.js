@@ -6,7 +6,7 @@ export const PlaylistsHeader = () => {
 
   const addNewPlaylistButton = liba.create('button')
   addNewPlaylistButton.append("add new playlist")
-  addNewPlaylistButton.addEventListener('click',()=>{
+  addNewPlaylistButton.addEventListener('click', () => {
     addPlaylist()
   })
 

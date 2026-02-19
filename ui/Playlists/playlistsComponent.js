@@ -1,4 +1,5 @@
 import {playlistComponent} from "./Playlist/playlistComponent.js"
+
 export function playlistsComponent(playlists) {
   const element = document.createElement('div')
   for (let i = 0; i < playlists.length; i++) {

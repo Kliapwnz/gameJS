@@ -24,9 +24,7 @@ export let playlists = [{
 
 export const deletePlaylist = (id) => {
   playlists = playlists.filter(p => p.id !== id)
-  observers.forEach((observer) => {
-    observer()
-  })
+  emmit()
 }
 
 export const addPlaylist = () => {
@@ -35,13 +33,18 @@ export const addPlaylist = () => {
     title: "New Playlist",
     tracks: []
   })
-  observers.forEach((observer) => {
-    observer()
-  })
+  emmit()
+
 }
 
 const observers = []
 
 export const subscribe = (observer) => {
   observers.push(observer)
+}
+
+function emmit() {
+  observers.forEach((observer) => {
+    observer()
+  })
 }

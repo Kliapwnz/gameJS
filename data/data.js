@@ -30,7 +30,7 @@ export const deletePlaylist = (id) => {
 }
 
 export const addPlaylist = () => {
-  playlists = playlists.push({
+  playlists.push({
     id: Date.now(),
     title: "New Playlist",
     tracks: []

@@ -29,6 +29,14 @@ export const deletePlaylist = (id) => {
   })
 }
 
+export const addPlaylist = () => {
+  playlists = playlists.push({
+    id: Date.now(),
+    title: "New Playlist",
+    tracks: []
+  })
+}
+
 const observers = []
 
 export const subscribe = (observer) => {

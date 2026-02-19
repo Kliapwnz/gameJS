@@ -24,6 +24,9 @@ export let playlists = [{
 
 export const deletePlaylist = (id) => {
   playlists = playlists.filter(p => p.id !== id)
+  observers.forEach((observer) => {
+    observer()
+  })
 }
 
 const observers = []

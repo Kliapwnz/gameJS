@@ -65,6 +65,7 @@ export const addPlaylist = () => {
     tracks: []
   })
   hideEditDialog()
+  addPlaylistState.newTitle = ""
   emit()
 
 }

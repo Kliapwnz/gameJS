@@ -13,5 +13,5 @@ export function DialogFormComponent() {
   element.append(playlistNameInputElement)// playlistImageSourceElement
 
   return element
-};
+}
 

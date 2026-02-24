@@ -6,7 +6,7 @@ export function playlistComponent(playlist) {
   const element = liba.create('div', ["playlist"])
 
   const playlistTitleElement = document.createElement("h2")
-  playlistTitleElement.append(playlist.title)
+  playlistTitleElement.append(playlist.title, " " , playlist.id)
 
   const deleteButtonElement = liba.create('button')
   deleteButtonElement.append("❌")

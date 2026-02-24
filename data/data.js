@@ -42,12 +42,23 @@ export const setNewTitle = (title) => {
   emit()
 }
 
-export const activateAddEditPlaylist = () => {
+export const activateAddEditPlaylist = (playlistId = null) => {
   addEditPlaylistState.isActive = true
+  if (playlistId) {
+    addEditPlaylistState.id = playlistId
+    const foundPlaylist = playlists.find((p) =>
+      p.id === playlistId
+    )
+    if (!foundPlaylist) {
+      throw new Error("404")
+    }
+    addEditPlaylistState.newTitle = foundPlaylist.title
+  }
   emit()
 }
 export const deactivateAddEditPlaylist = () => {
   addEditPlaylistState.isActive = false
+
   emit()
 }
 

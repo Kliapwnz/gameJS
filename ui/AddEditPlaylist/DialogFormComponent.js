@@ -1,4 +1,4 @@
-import {liba} from "../../shared/liba";
+import {liba} from "../../shared/liba.js";
 
 export function DialogFormComponent() {
   const element = liba.create('form')
@@ -6,5 +6,7 @@ export function DialogFormComponent() {
   const playlistImageSourceElement = liba.create('input')
 
   element.append(playlistNameInputElement, playlistImageSourceElement)
+
+  return element
 };
 

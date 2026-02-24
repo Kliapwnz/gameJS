@@ -38,6 +38,7 @@ export let addPlaylistState = {
 
 export const setNewTitle = (title) => {
   addPlaylistState.newTitle = title
+  emit()
 }
 
 export const showEditDialog = () => {

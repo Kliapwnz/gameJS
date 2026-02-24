@@ -6,6 +6,9 @@ export function DialogActionsComponent() {
 
   const cancelButtonElement = liba.create('button')
   cancelButtonElement.append("Cancel")
+  cancelButtonElement.addEventListener('click', () => {
+
+  })
   const addPlaylistButtonElement = liba.create('button')
   addPlaylistButtonElement.append('Create')
 

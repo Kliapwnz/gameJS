@@ -53,6 +53,9 @@ export const activateAddEditPlaylist = (playlistId = null) => {
       throw new Error("404")
     }
     addEditPlaylistState.newTitle = foundPlaylist.title
+  } else {
+    addEditPlaylistState.newTitle = ""
+    addEditPlaylistState.id = null
   }
   emit()
 }

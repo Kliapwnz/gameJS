@@ -1,12 +1,13 @@
 import {liba} from "../../shared/liba.js";
 import {dialogOpen} from "../../data/data.js";
+import {DialogHeaderComponent} from "./DialogHeaderComponent";
 
 
 export function AddEditPlaylistComponent() {
 
   const element = liba.create('dialog')
 
-  element.innerHTML = ' <p>Greetings, one and all!</p> <form method="dialog"> <button>OK</button> </form>'
+  element.append(DialogHeaderComponent, dialogFormElement, dialogButtonsElement)
   element.open = dialogOpen.value
 
   return element

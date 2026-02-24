@@ -1,5 +1,5 @@
 import {liba} from "../../shared/liba.js";
-import {addPlaylist, addEditPlaylistState, deactivateAddEditPlaylist} from "../../data/data.js";
+import {createUpdatePlaylist, addEditPlaylistState, deactivateAddEditPlaylist} from "../../data/data.js";
 
 
 export function DialogActionsComponent() {
@@ -17,7 +17,7 @@ export function DialogActionsComponent() {
   }
   addPlaylistButtonElement.addEventListener('click', () => {
     try {
-      addPlaylist()
+      createUpdatePlaylist()
     } catch (error) {
       alert(error)
     }

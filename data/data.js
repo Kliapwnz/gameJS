@@ -70,7 +70,7 @@ export const deletePlaylist = (id) => {
   emit()
 }
 
-export const addPlaylist = () => {
+export const createUpdatePlaylist = () => {
   if (addEditPlaylistState.newTitle === '') {
     throw new Error("Empty title")
   }

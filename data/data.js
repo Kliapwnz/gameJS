@@ -52,6 +52,7 @@ export const addPlaylist = () => {
     title: "New Playlist",
     tracks: []
   })
+  hideEditDialog()
   emit()
 
 }

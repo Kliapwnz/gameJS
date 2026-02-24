@@ -19,5 +19,5 @@ export function DialogActionsComponent() {
   element.append(cancelButtonElement, addPlaylistButtonElement)
   return element
 
-};
+}
 

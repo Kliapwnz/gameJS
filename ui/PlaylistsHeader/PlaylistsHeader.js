@@ -1,5 +1,5 @@
 import {liba} from "../../shared/liba.js";
-import {showEditDialog} from "../../data/data.js";
+import {activateAddEditPlaylist} from "../../data/data.js";
 
 export const PlaylistsHeader = () => {
   const element = liba.create('div')
@@ -7,7 +7,7 @@ export const PlaylistsHeader = () => {
   const addNewPlaylistButton = liba.create('button')
   addNewPlaylistButton.append("add new playlist")
   addNewPlaylistButton.addEventListener('click', () => {
-    showEditDialog()
+    activateAddEditPlaylist()
   })
 
   element.append(addNewPlaylistButton)

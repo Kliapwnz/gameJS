@@ -10,7 +10,7 @@ export function AddEditPlaylistComponent() {
   const element = liba.create('dialog')
 
   element.append(DialogHeaderComponent(), DialogFormComponent(), DialogActionsComponent())
-  element.open = addPlaylistState.isOpen
+  element.open = addPlaylistState.isActive
 
   return element
 }

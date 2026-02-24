@@ -31,7 +31,7 @@ export let playlists = [{
 }]
 
 export let addPlaylistState = {
-  isOpen: false,
+  isActive: false,
   newTitle: ""
 }
 
@@ -41,11 +41,11 @@ export const setNewTitle = (title) => {
 }
 
 export const showEditDialog = () => {
-  addPlaylistState.isOpen = true
+  addPlaylistState.isActive = true
   emit()
 }
 export const hideEditDialog = () => {
-  addPlaylistState.isOpen = false
+  addPlaylistState.isActive = false
   emit()
 }
 

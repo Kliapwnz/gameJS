@@ -1,5 +1,5 @@
 import {liba} from "../../shared/liba.js";
-import {addPlaylist, addPlaylistState, hideEditDialog} from "../../data/data.js";
+import {addPlaylist, addEditPlaylistState, hideEditDialog} from "../../data/data.js";
 
 
 export function DialogActionsComponent() {
@@ -12,7 +12,7 @@ export function DialogActionsComponent() {
   })
   const addPlaylistButtonElement = liba.create('button')
   addPlaylistButtonElement.append('Create')
-  if (addPlaylistState.newTitle === "") {
+  if (addEditPlaylistState.newTitle === "") {
     addPlaylistButtonElement.disabled = true
   }
   addPlaylistButtonElement.addEventListener('click', () => {

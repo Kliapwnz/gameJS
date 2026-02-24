@@ -1,5 +1,5 @@
 import {liba} from "../../shared/liba.js";
-import {addPlaylistState, setNewTitle} from "../../data/data.js";
+import {addEditPlaylistState, setNewTitle} from "../../data/data.js";
 
 export function DialogFormComponent() {
   const element = liba.create('form')
@@ -9,7 +9,7 @@ export function DialogFormComponent() {
   })
   // const playlistImageSourceElement = liba.create('input')
 
-  playlistNameInputElement.value = addPlaylistState.newTitle
+  playlistNameInputElement.value = addEditPlaylistState.newTitle
   setTimeout(()=> {
     playlistNameInputElement.focus()
   }, 1)

@@ -30,23 +30,23 @@ export let playlists = [{
   ]
 }]
 
-export let addPlaylistState = {
+export let addEditPlaylistState = {
   isActive: false,
   newTitle: ""
 }
 
 
 export const setNewTitle = (title) => {
-  addPlaylistState.newTitle = title
+  addEditPlaylistState.newTitle = title
   emit()
 }
 
 export const showEditDialog = () => {
-  addPlaylistState.isActive = true
+  addEditPlaylistState.isActive = true
   emit()
 }
 export const hideEditDialog = () => {
-  addPlaylistState.isActive = false
+  addEditPlaylistState.isActive = false
   emit()
 }
 
@@ -56,16 +56,16 @@ export const deletePlaylist = (id) => {
 }
 
 export const addPlaylist = () => {
-  if (addPlaylistState.newTitle === '') {
+  if (addEditPlaylistState.newTitle === '') {
     throw new Error("Empty title")
   }
   playlists.push({
     id: Date.now(),
-    title: addPlaylistState.newTitle,
+    title: addEditPlaylistState.newTitle,
     tracks: []
   })
   hideEditDialog()
-  addPlaylistState.newTitle = ""
+  addEditPlaylistState.newTitle = ""
   emit()
 
 }

@@ -30,6 +30,15 @@ export let playlists = [{
   ]
 }]
 
+export let dialogOpen = {value: true}
+
+export const showEditDialog = () => {
+  dialogOpen.value = true
+}
+export const hideEditDialog = () => {
+  dialogOpen.value = false
+}
+
 export const deletePlaylist = (id) => {
   playlists = playlists.filter(p => p.id !== id)
   emit()

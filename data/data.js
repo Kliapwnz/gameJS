@@ -55,6 +55,9 @@ export const deletePlaylist = (id) => {
 }
 
 export const addPlaylist = () => {
+  if (dialogOpen.newTitle === '') {
+    return
+  }
   playlists.push({
     id: Date.now(),
     title: dialogOpen.newTitle,

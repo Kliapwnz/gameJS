@@ -13,7 +13,7 @@ export function DialogActionsComponent() {
   const addPlaylistButtonElement = liba.create('button')
   addPlaylistButtonElement.append('Create')
   addPlaylistButtonElement.addEventListener('click', () => {
-    addPlaylist()
+    addPlaylist("Hello motherfuckers")
   })
 
   element.append(cancelButtonElement, addPlaylistButtonElement)

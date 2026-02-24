@@ -30,7 +30,15 @@ export let playlists = [{
   ]
 }]
 
-export let dialogOpen = {value: false}
+export let dialogOpen = {
+  value: false,
+  newTitle: ""
+}
+
+
+export const setNewTitle = (title) => {
+  dialogOpen.newTitle = title
+}
 
 export const showEditDialog = () => {
   dialogOpen.value = true
@@ -49,7 +57,7 @@ export const deletePlaylist = (id) => {
 export const addPlaylist = () => {
   playlists.push({
     id: Date.now(),
-    title: "New Playlist",
+    title: dialogOpen.newTitle,
     tracks: []
   })
   hideEditDialog()
